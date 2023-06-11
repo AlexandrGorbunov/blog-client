@@ -6,7 +6,7 @@ import {UserContext} from "./UserContext";
 		const {setUserInfo,userInfo} = useContext(UserContext);
 		useEffect(() => {
 			if (userInfo?.token) { 
-				fetch('http://localhost:4000/profile', {
+				fetch('https://blog-9d1w.onrender.com/profile', {
 					credentials: 'include',
 				}).then(response => {
 					response.json().then(userInfo => {
@@ -21,7 +21,7 @@ import {UserContext} from "./UserContext";
 		const confirmLogout = window.confirm("Вы уверены, что хотите выйти?");
 	
 		if (confirmLogout) {
-			fetch('https://blog-app-1jc3.onrender.com/logout', {
+			fetch('https://blog-9d1w.onrender.com/logout', {
 				credentials: 'include',
 				method: 'POST',
 			});

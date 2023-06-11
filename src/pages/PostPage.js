@@ -10,7 +10,7 @@ export default function PostPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`https://blog-app-1jc3.onrender.com/post/${id}`)
+    fetch(`https://blog-9d1w.onrender.com/post/${id}`)
       .then(response => {
         response.json().then(postInfo => {
           setPostInfo(postInfo);
@@ -20,7 +20,7 @@ export default function PostPage() {
 
   async function deletePost() {
     if (window.confirm('Вы действительно хотите удалить пост?')) {
-      const response = await fetch(`https://blog-app-1jc3.onrender.com/post/${id}`, {
+      const response = await fetch(`https://blog-9d1w.onrender.com/post/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json'
@@ -54,7 +54,7 @@ export default function PostPage() {
         </div>
       )}
       <div className="image">
-        <img src={`https://blog-app-1jc3.onrender.com/${postInfo.cover}`} alt="" />
+        <img src={`https://blog-9d1w.onrender.com/${postInfo.cover}`} alt="" />
       </div>
       <div className="content" dangerouslySetInnerHTML={{ __html: postInfo.content }} />
     </div>
